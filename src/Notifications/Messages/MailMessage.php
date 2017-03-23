@@ -2,8 +2,6 @@
 
 namespace Illuminate\Notifications\Messages;
 
-use Log;
-
 class MailMessage extends SimpleMessage
 {
     /**
@@ -97,7 +95,6 @@ class MailMessage extends SimpleMessage
     public function from($address, $name = null)
     {
         $this->from = [$address, $name];
-        Log::debug("Name set to $name");
 
         return $this;
     }
